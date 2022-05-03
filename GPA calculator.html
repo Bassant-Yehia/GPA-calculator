@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ 
+
+
+
+    <title>My GPA Calculator </title>
+    <link rel="icon" href="GPA-calc.png">
+
+    <h1 id="AnyThing" style=" color: rgb(247, 246, 252);
+    background-color:rgb(233, 176, 55); 
+     border: 5px;
+     border-style: double;
+     border-color: black;
+      width: 100%;height:80;
+        text-align: center;"> My GPA Calculator </h1>
+<style> body{background-image: url(OIP\ \(1\).jpg);}
+font{color:blanchedalmond; font-size: 18px;
+     font-weight: bold; font-family:Arial, Helvetica, sans-serif;} 
+p{border: radius 10px; border-color: rgb(218, 165, 52); 
+font-family:Arial;font-weight: bold;font-size: 16px;
+ border-style: double; font-size: 20px; background-color:black; border-radius: 100%; border-width:20px; color: rgb(255, 255, 255)}
+button{ background-color:red; width:200px;
+     height:80px; 
+     border-style: dotted; border-radius: 100%; font-size:22; font-weight: bold; font-family:Arial; color:beige; }
+ #part1{border-radius: 10%;
+ block-size: 30%;  border-style: double;
+  border-color: rgb(218, 165, 52);
+  background-color:rgb(54, 51, 47); 
+  background-size: 25%;}
+</style>
+
+
+<!--<img  height="500" width="500">-->
+
+
+</head>
+
+<body>
+    <p id="Sum"> </p> 
+    <div id="part1">   <font> <center>
+       <li> Course Name1 : Selected Topics 
+       <br> Course Grade1 <input type="number"id="g1"> </li>
+        <br><br> <li>Course Name2 : Selected Topics 2
+        <br> Course Grade2 <input type="number"id="g2"></li>
+        <br><br><li>Course Name3 : BioServer-web
+        <br> Course Grade3 <input type="number"id="g3"></li>
+        <br><br> </font></div> <hr>
+       <center> <button type="button" onClick="my()"> My GPA Caculator </button>
+        <p id="result"></p> </center>
+       </center>  
+       
+       <script>
+    var sum,Arr;
+     function my(){   //var L=[85,80,75];
+        //var num1=L[0]*3;
+       // var num2=L[1]*3;
+      //  var num3=L[2]*3;
+            var x = document.getElementById("g1").value;
+            var y = document.getElementById("g2").value;
+            var z = document.getElementById("g3").value;
+  L=[x,y,z];
+      var len=L.length;
+        var Gpa,points=0,hours=3;
+    for(i=0;i<len;i++)
+    { //var x=arr2[i];
+    //text+="<li>"+arr[i]+ "<br>"+"</li>"
+    //document.write(i+"-Course Name = "+arr[i] + " , Course Grade="+arr2[i]);
+    
+    if(L[i]< 100 &&L[i]>85)
+    {points+=4*hours;  //x=document.getElementById("B").innerHTML;
+    }
+    else if(L[i]<86&&L[i]>75)
+    {points+=3*hours;} // y=document.getElementById("B").innerHTML;}
+    else if(L[i]<76&&L[i]>50)
+    {points+=2*hours;}  //w=document.getElementById("B").innerHTML;}
+    else
+    {points+=0*hours;} //z=document.getElementById("B").innerHTML;}
+    
+    }
+    Gpa=points/9.0;
+    
+      document.getElementById("result").innerHTML=Gpa;} </script>
+    
+</body>
+</html>
+
